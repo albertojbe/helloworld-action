@@ -1,0 +1,10 @@
+name: helloworld-action
+on: [push]
+jobs:
+  print-hello:
+    runs-on: ubuntu-latest
+      - uses: actions/checkout@v4
+      - name: Hello world using echo
+        run: echo "$(<hello.txt)"
+      - name: Hello world using cat
+        run: cat hello.txt
